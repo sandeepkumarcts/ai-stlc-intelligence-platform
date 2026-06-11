@@ -1,2 +1,140 @@
-# ai-stlc-intelligence-platform
-Enterprise-style AI-driven STLC automation platform that transforms requirements into validated and traceable test assets using multi-agent orchestration (LangGraph), LLM abstraction (Ollama), and guardrail-based validation to ensure structured, explainable, and coverage-aware test design.
+- AI-Powered STLC Intelligence Platform
+
+	An AI-driven software engineering platform that automates key stages of the Software Testing Life Cycle (STLC) by converting natural language requirements into structured, validated, and traceable test assets using multi-agent orchestration and local LLMs.
+
+- Problem Statement
+
+	Modern QA teams face challenges such as:
+
+		Manual and inconsistent test case design
+		Lack of structured requirement-to-test traceability
+		Poor coverage of edge, negative, and boundary scenarios
+		High dependency on human interpretation of requirements
+		Time-consuming regression test design
+
+	These challenges lead to slower delivery cycles and reduced software quality.
+
+- Solution Overview
+
+	This platform introduces an AI-powered multi-agent system that automates STLC activities:
+
+		Understands and processes natural language requirements
+		Generates structured test cases using AI agents
+		Categorizes tests into functional, negative, boundary, and integration types
+		Ensures validation of AI outputs using guardrails
+		Maintains requirement-to-test traceability (RTM)
+		Performs test coverage analysis
+
+	The system is designed to run locally using open-source LLMs (Ollama).
+	
+-Architecture
+	High-Level Design
+		Solution Vision → docs/solution-vision.md
+		C4 Context Diagram → docs/c4-context.md	
+   System Flow
+		User Requirement
+				↓
+		FastAPI Gateway
+				↓
+		LangGraph Orchestrator (Multi-Agent System)
+				↓
+		LLM Gateway (Ollama - Local LLM)
+				↓
+		Validation Layer (Pydantic Guardrails)
+				↓
+		Test Repository
+				↓
+		Output (JSON / Excel / UI)
+		
+-Key Capabilities
+	AI & Automation
+		Multi-agent orchestration using LangGraph
+		Requirement analysis and decomposition
+		Intelligent test case generation
+	Test Engineering
+		Functional test generation
+		Negative test generation
+		Boundary value test generation
+		Integration test suggestions
+	Quality & Governance
+		Requirement-to-test traceability (RTM)
+		Test coverage analysis
+		Structured output validation (Pydantic)
+		LLM output guardrails	
+
+-Tech Stack
+	Python
+	FastAPI
+	LangGraph
+	Ollama (Llama 3 / Mistral)
+	Pydantic
+	Streamlit (UI – upcoming)
+	PostgreSQL (future enhancement)
+	Docker (planned)
+
+-Project Structure (Planned)
+
+	ai-stlc-intelligence-platform/
+	│
+	├── docs/
+	│   ├── solution-vision.md
+	│   ├── c4-context.md
+	│
+	├── src/
+	│   ├── api/
+	│   ├── agents/
+	│   ├── llm/
+	│   ├── core/
+	│   ├── models/
+	│
+	├── tests/
+	├── docker/
+	├── README.md
+
+Project Status
+	MVP Design Phase
+	 - Solution Vision completed
+	 - C4 Context diagram completed
+	 - Implementation pending
+
+Roadmap
+	Phase 1 (Current)
+		Architecture design
+		Repository setup
+		C4 diagrams
+		Solution Vision document
+	Phase 2
+		FastAPI backend
+		Ollama integration
+		LangGraph multi-agent workflow
+	Phase 3
+		Test generation engine
+		RTM generation
+		Coverage analysis
+	Phase 4
+		Streamlit UI
+		Export (JSON / Excel)
+		Docker deployment
+
+- Design Principles
+
+	LLM outputs are treated as untrusted inputs
+	All outputs must pass validation and guardrails
+	System is modular and extensible
+	Traceability is a first-class requirement
+	Observability will be added in later phases
+
+
+Documentation
+	Solution Vision → docs/solution-vision.md
+	C4 Context → docs/c4-context.md
+
+
+Summary
+
+	This project demonstrates an enterprise-style AI system design that combines:
+
+	AI engineering (LLMs + LangGraph)
+	Software architecture (C4 model, layered design)
+	QA engineering (STLC automation, test design)
+	Backend engineering (FastAPI services)	
