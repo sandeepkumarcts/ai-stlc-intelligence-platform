@@ -1,2 +1,10 @@
-# ai-stlc-intelligence-platform
-Enterprise-style AI-driven STLC automation platform that transforms requirements into validated and traceable test assets using multi-agent orchestration (LangGraph), LLM abstraction (Ollama), and guardrail-based validation to ensure structured, explainable, and coverage-aware test design.
+
+# AI-Powered STLC Intelligence Platform
+
+AI-driven system that converts software requirements into structured, validated test cases using multi-agent orchestration and local LLMs.
+
+## Architecture
+See /docs/solution-vision.md
+
+## Status
+MVP Design Phase
